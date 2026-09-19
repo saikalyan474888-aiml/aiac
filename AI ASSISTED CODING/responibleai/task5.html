@@ -1,0 +1,22 @@
+<!-- Task 5: Accessibility and Inclusiveness -->
+<!-- Review of Standard Forms: -->
+<!-- Many standard AI-generated forms use exclusionary language (e.g., enforcing binary "Male/Female" options, requiring a "First Name" and "Last Name" which doesn't fit all cultural naming conventions, and failing to provide screen-reader support). -->
+<!-- Revised Inclusive Feedback Form Code (HTML/Accessibility focused): -->
+<!-- Revised for accessibility (ARIA labels) and inclusive language -->
+<form action="/submit-feedback" method="POST">
+    <!-- Uses 'Full Name' or 'Preferred Name' instead of strict First/Last -->
+    <label for="pref_name">Preferred Name:</label>
+    <input type="text" id="pref_name" name="pref_name" aria-required="false" placeholder="How should we address you?">
+
+    <!-- Inclusive pronouns option rather than asking for biological sex or binary gender -->
+    <label for="pronouns">Pronouns (Optional):</label>
+    <input type="text" id="pronouns" name="pronouns" aria-label="Enter your pronouns if you wish">
+
+    <label for="feedback">Your Feedback:</label>
+    <textarea id="feedback" name="feedback" required aria-required="true" aria-label="Feedback text area"></textarea>
+
+    <button type="submit" aria-label="Submit your feedback">Submit</button>
+</form>
+
+
+<!-- This version avoids exclusionary assumptions by using open text fields for identity, standardizing screen-reader compatibility (aria-labels), and respecting diverse naming conventions.  -->
